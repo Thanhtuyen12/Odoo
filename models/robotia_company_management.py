@@ -22,8 +22,8 @@ class RobotiaCompanyManagement(models.Model):
             if record.company_phone and not record.company_phone.isdigit():
                 raise ValidationError(_("Phone number should contain only digits."))
 
-    @api.constrains('tax_id')
-    def _check_tax_id(self):
+    @api.constrains('company_tax_code')
+    def _check_company_tax_code(self):
         for record in self:
             if record.company_tax_code and not record.company_tax_code.isdigit():
                 raise ValidationError(_("Tax ID should contain only digits."))
