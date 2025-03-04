@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="robotia_company_management.Dashboard" owl="1">
+        <div class="robotia-dashboard">
+            <div class="container-fluid">
+                <div class="row mb-3 align-items-center">
+                    <div class="col">
+                        <h7 class="page-title">Robotia Dashboard</h7>
+                    </div>
+                </div>
+            </div>
+
+
+        <div class="container-fluid dash-main-content">
+            <div t-if="state.loading" class="dash-loader">
+                <div class="spinner-grow text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-3">Đang tải dữ liệu...</p>
+            </div>
+
+            <t t-if="!state.loading">
+                <div class="dash-section mb-4">
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h4 class="dash-card-title">
+                                        <i class="fa fa-building me-2"></i>
+                                        Danh sách công ty
+                                    </h4>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="dash-actions">
+                                        <button class="btn btn-sm btn-outline-primary me-2"
+                                                t-on-click="onAddCompany" title="Thêm công ty mới">
+                                            <i class="fa fa-plus-circle"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-primary" t-on-click="refreshCompanies"
+                                                title="Làm mới">
+                                            <i class="fa fa-refresh"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                <div class="dash-card-body company-container">
+                    <t t-if="state.companies.length > 0">
+                        <div class="robotia-company-table">
+                            <div class="table-container">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Tên công ty</th>
+                                            <th>Điện thoại</th>
+                                            <th>Mã số thuế</th>
+                                            <th>Vốn điều lệ</th>
+                                            <th>Truy cập</th>
+                                        </tr>
+                                    </thead>
+                                <tbody>
+                                    <t t-foreach="state.companies" t-as="company" t-key="company.id">
+                                        <tr class="company-row">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="company-avatar">
+                                                        <span t-esc="company.name.charAt(0).toUpperCase()"/>
+                                                    </div>
+                                                    <div class="ms-3">
+                                                        <span class="fw-bold" t-esc="company.name"/>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span t-esc="company.company_phone"/></td>
+                                            <td><span t-esc="company.company_tax_code"/></td>
+                                            <td><span t-esc="company.company_charter_capital"/></td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <button class="btn btn-sm btn-outline-info"
+                                                            t-on-click="() => this.viewCompanyDetails(company.id)">
+                                                        <i class="fa fa-eye"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </t>
+                    <t t-else="">
+                        <div class="empty-state">
+                            <div class="empty-state-icon">
+                                <i class="fa fa-building-o"></i>
+                            </div>
+                            <h4>Chưa có thông tin công ty</h4>
+                            <p>Bắt đầu bằng cách thêm thông tin công ty đầu tiên của bạn.</p>
+                            <button class="btn btn-primary" t-on-click="onAddCompany">
+                                <i class="fa fa-plus-circle me-2"></i>
+                                Thêm công ty mới
+                            </button>
+                        </div>
+                    </t>
+                </div>
+                </div>
+                </div>
+
+                <div class="dash-section mb-4">
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <h4 class="dash-card-title">
+                                <i class="fa fa-th-large me-2"></i>
+                                Modules
+                            </h4>
+                        </div>
+                        <div class="dash-card-body">
+                            <div class="row">
+                                <t t-foreach="state.modules" t-as="module" t-key="module.id">
+                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-4">
+                                        <RobotiaDashboardItem module="module"
+                                                              onModuleClick="() => this.onModuleClick(module.id)"/>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+                </t>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="robotia_company_management.DashboardItem" owl="1">
+        <div class="module-card" t-on-click="onClick">
+            <div class="module-icon-wrapper">
+                <div class="module-icon-container">
+                    <img t-att-src="props.module.icon" alt="Module Icon" class="module-icon"/>
+                </div>
+            </div>
+            <div class="module-content">
+                <h5 class="module-title" t-esc="props.module.name"/>
+            </div>
+        </div>
+    </t>
+</templates>

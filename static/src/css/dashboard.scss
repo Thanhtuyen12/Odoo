@@ -1,0 +1,178 @@
+.robotia-dashboard {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding-bottom: 2rem;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+.dash-header {
+    height: 120px;
+    background-color: var(--primary);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dash-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cover-upload-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.cover-upload-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.dash-actions button {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.dash-actions button i {
+    font-size: 1.2rem;
+}
+
+.dash-actions button:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.dash-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.dash-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.dash-stat-card {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.dash-stat-card .stat-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.dash-stat-card .stat-value {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.dash-stat-card .stat-label {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.dash-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.dash-card-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.dash-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.dash-card-body {
+    padding: 1.5rem;
+}
+
+.robotia-company-table {
+    width: 100%;
+    overflow: hidden;
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.company-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.module-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.module-icon-wrapper {
+    margin-bottom: 1rem;
+}
+
+.module-icon-container {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+}
+
+.module-icon {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.module-title {
+    font-size: 1.2rem;
+}

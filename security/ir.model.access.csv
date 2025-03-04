@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_robotia_company_management_user,robotia_company_management_user,model_robotia_company_management,,1,1,1,1
