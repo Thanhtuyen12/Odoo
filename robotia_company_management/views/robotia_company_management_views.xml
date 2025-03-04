@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="robotia_company_management_view_tree" model="ir.ui.view">
+            <field name="name">Quản lý công ty</field>
+            <field name="model">robotia.company.management</field>
+            <field name="arch" type="xml">
+                <list string="Quản lý công ty">
+                    <field name="name"/>
+                    <field name="company_phone"/>
+                    <field name="company_address"/>
+                    <field name="company_tax_code"/>
+                    <field name="company_charter_capital"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="robotia_company_management_view_form" model="ir.ui.view">
+            <field name="name">Quản lý công ty</field>
+            <field name="model">robotia.company.management</field>
+            <field name="arch" type="xml">
+                <form string="Quản lý công ty">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="company_phone"/>
+                            <field name="company_address"/>
+                            <field name="company_tax_code"/>
+                            <field name="company_charter_capital"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_robotia_dashboard" model="ir.actions.client">
+            <field name="name">Robotia Dashboard</field>
+            <field name="tag">robotia_dashboard</field>
+        </record>
+
+        <record id="robotia_company_management_action" model="ir.actions.act_window">
+            <field name="name">Quản lý công ty</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">robotia.company.management</field>
+            <field name="view_id" ref="robotia_company_management_view_tree"/>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>

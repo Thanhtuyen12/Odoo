@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record forcecreate="0" id="robotia_company_1" model="robotia.company.management">
+            <field name="name">Công ty Cổ phần VinFast</field>
+            <field name="company_phone">02439749999</field>
+            <field name="company_address">KCN Đình Vũ - Cát Hải, Hải Phòng, Việt Nam</field>
+            <field name="company_tax_code">0107953237</field>
+            <field name="company_charter_capital">42.497 tỷ VNĐ</field>
+        </record>
+
+        <record forcecreate="0" id="robotia_company_2" model="robotia.company.management">
+            <field name="name">Công ty Cổ phần Vinpearl</field>
+            <field name="company_phone">02439749998</field>
+            <field name="company_address">Số 7, đường Bằng Lăng 1, Vinhomes Riverside, Long Biên, Hà Nội</field>
+            <field name="company_tax_code">0100753671</field>
+            <field name="company_charter_capital">8.500 tỷ VNĐ</field>
+        </record>
+
+        <record forcecreate="0" id="robotia_company_3" model="robotia.company.management">
+            <field name="name">Công ty Cổ phần Vinhomes</field>
+            <field name="company_phone">02439749997</field>
+            <field name="company_address">Số 7, đường Bằng Lăng 1, Vinhomes Riverside, Long Biên, Hà Nội</field>
+            <field name="company_tax_code">0102184650</field>
+            <field name="company_charter_capital">33.495 tỷ VNĐ</field>
+        </record>
+
+        <record forcecreate="0" id="robotia_company_4" model="robotia.company.management">
+            <field name="name">Công ty Cổ phần Vincom Retail</field>
+            <field name="company_phone">02439749996</field>
+            <field name="company_address">Số 72 Lê Thánh Tôn, Bến Nghé, Quận 1, TP. Hồ Chí Minh</field>
+            <field name="company_tax_code">0105446222</field>
+            <field name="company_charter_capital">23.288 tỷ VNĐ</field>
+        </record>
+
+        <record forcecreate="0" id="robotia_company_5" model="robotia.company.management">
+            <field name="name">Công ty Cổ phần Vinmec</field>
+            <field name="company_phone">02439743556</field>
+            <field name="company_address">Số 458 Minh Khai, Hai Bà Trưng, Hà Nội</field>
+            <field name="company_tax_code">0106050554</field>
+            <field name="company_charter_capital">1.800 tỷ VNĐ</field>
+        </record>
+
+
+    </data>
+</odoo>

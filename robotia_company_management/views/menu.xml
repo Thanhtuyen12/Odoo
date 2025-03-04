@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_robotia_company_management_root"
+              name="Quản lý công ty"
+              sequence="10"
+              web_icon="robotia_company_management,static/description/odoo_icon.png"/>
+
+    <menuitem id="menu_robotia_dashboard" parent="menu_robotia_company_management_root" name="Dashboard"
+              action="action_robotia_dashboard" sequence="10"/>
+
+    <menuitem id="menu_robotia_company_management"
+              name="Quản lý công ty"
+              parent="menu_robotia_company_management_root"
+              action="robotia_company_management_action"
+              sequence="20"/>
+
+</odoo>
